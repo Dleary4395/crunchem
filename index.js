@@ -11,7 +11,7 @@ var imageminMozjpeg = require('imagemin-mozjpeg');
 var ProgressBar = require('progress');
 
 
-function getFiles(srcpath) {
+function scanDirectory(srcpath) {
   recursive('./', function (err, files) {
     // Files is an array of filename 
     fileArray = files;
@@ -19,8 +19,7 @@ function getFiles(srcpath) {
   });
 }
 
-//Get file extension for file sent to function
-function getFileExtension(file) {
+function optimizeImage(file) {
   if((file.indexOf('.jpg') > -1 || file.indexOf('.svg') > -1 || file.indexOf('.png') > -1) && file.indexOf("node_modules") != 0) {
 	var fileParts = file.split('.');
 	switch(fileParts[1]) {
@@ -58,7 +57,7 @@ function iterateFiles(files) {
   	var imageFiles = 0;
     for(var i=0;i<files.length;i++) {
       var file = files[i];
-      if(getFileExtension(file)) {
+      if(optimizeImage(file)) {
       	imageFiles++;
       }
     }
@@ -68,4 +67,4 @@ function iterateFiles(files) {
   }
 }
 
-getFiles('');
+scanDirectory();

@@ -1,7 +1,7 @@
 {
   "name": "crunchem",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node CLI to compress SVG, JPEG, and PNG files",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,8 +12,13 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Dleary4395/crunchem"
   },
+  "keywords": [
+    "pngcompression",
+    "jpegcompression",
+    "nodecliimagecompression"
+  ],
   "dependencies": {
     "fs": "0.0.2",
     "imagemin": "^5.1.1",
