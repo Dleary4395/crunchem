@@ -1,0 +1,29 @@
+{
+  "name": "crunchem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Douglas Leary",
+  "bin": {
+    "crunchem": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "fs": "0.0.2",
+    "imagemin": "^5.1.1",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-optipng": "^5.1.0",
+    "path": "^0.12.7",
+    "progress": "^1.1.8",
+    "recursive-readdir": "^2.0.0",
+    "svgo": "^0.6.6"
+  },
+  "preferGlobal": true,
+  "license": "MIT"
+}
